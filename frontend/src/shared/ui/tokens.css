@@ -1,0 +1,56 @@
+/* Design tokens. One accent (emerald), zinc neutrals, one radius (0.5rem). Dark mode follows the OS. */
+:root {
+  color-scheme: light dark;
+  --bg: #f6f6f7;
+  --surface: #fdfdfd;
+  --text: #18181b;
+  --muted: #52525b;
+  --line: #e4e4e7;
+  --control: #85858e; /* control boundaries: 3.59:1 on surface (WCAG 1.4.11) */
+  --accent: #047857;
+  --accent-ink: #fdfdfd;
+  --accent-soft: #e7f6ef;
+  --warn: #92400e;
+  --warn-soft: #fdf6e3;
+  --danger: #b91c1c;
+  --danger-soft: #fdf0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0c0e;
+    --surface: #17171a;
+    --text: #f2f2f3;
+    --muted: #a6a6ad;
+    --line: #2a2a2f;
+    --control: #73737d; /* 3.81:1 on surface */
+    --accent: #3ecf98;
+    --accent-ink: #06261a;
+    --accent-soft: #0f2a1f;
+    --warn: #f5c55b;
+    --warn-soft: #2b2109;
+    --danger: #f6a3a3;
+    --danger-soft: #2d1212;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-control: var(--control);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: system-ui, "Segoe UI Variable", "Segoe UI", -apple-system, "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

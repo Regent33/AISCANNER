@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+fixtures/out/
+/data/
+node_modules/
+frontend/dist/
+.pytest_cache/
+.models/
+/.claude/imported-sessions/
+test-results/
+playwright-report/
